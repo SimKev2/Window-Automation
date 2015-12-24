@@ -116,7 +116,7 @@ class WindowManager:
 
     def right_click_in_window(self, m_x, m_y):
         lParam = (m_y) << 16 | (m_x)
-        win32gui.SendMessage(self._handle, win32con.WM_LBUTTONDOWN, win32con.MK_LBUTTON, lParam)
-        win32gui.SendMessage(self._handle, win32con.WM_LBUTTONUP, 0, lParam)
+        win32gui.SendMessage(self._handle, win32con.WM_RBUTTONDOWN, win32con.MK_RBUTTON, lParam)
+        win32gui.SendMessage(self._handle, win32con.WM_RBUTTONUP, 0, lParam)
 
     #-------------------------------------------------------------------------
